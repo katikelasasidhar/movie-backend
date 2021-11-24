@@ -10,20 +10,6 @@ router.
   
       res.send(movie)
   })
-  .get(async (req,res)=>{
-    //console.log(req.query)
-    let filter=req.query;
-    if(filter){
-      filter.rating=parseInt(filter.rating)
-    }
-  
-    
-    const movie= await getmoviebyfilter(client, filter)
-    
-  
-      res.send(movie)
-  
-  })
   .post(async (req,res)=>{
     const data=req.body;
    
