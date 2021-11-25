@@ -7,7 +7,7 @@ import {movierouter}  from "./routers/movie.js"
 dotenv.config({path:'./.env'});
 app.use(express.json())
 const port=process.env.PORT||8000
-  const MONGO_URL=process.env.DATABASE_URL;
+  const MONGO_URL=process.env.MONGO_URL;
 
   async function createConnection(){
   const client = new MongoClient(MONGO_URL);
