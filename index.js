@@ -4,7 +4,7 @@ import {MongoClient} from 'mongodb';
 import dotenv from "dotenv"
 
 import {movierouter}  from "./routers/movie.js"
-dotenv.config({path:'./.env'});
+dotenv.config();
 app.use(express.json())
 const port=process.env.PORT||8000
   const MONGO_URL=process.env.MONGO_URL;
